@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Dancing_Script, Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const dancingscript_init = Dancing_Script({
+  subsets: ["latin"],
+  weight: ['400','500','600','700'],
+  variable: '--font-dancingscript',
+})
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={dancingscript_init.variable}>{children}</body>
     </html>
   );
 }
